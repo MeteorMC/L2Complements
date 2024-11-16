@@ -439,13 +439,6 @@ public class RecipeGen {
 						.define('L', Items.LAPIS_LAZULI)
 						.save(pvd, getID(LCEnchantments.SNOW_WALKER.get()));
 
-				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.SOUL_BOUND.get(), 1)::unlockedBy, LCItems.VOID_EYE.get())
-						.pattern("LAL").pattern("ABA").pattern("LAL")
-						.define('A', LCItems.VOID_EYE.get())
-						.define('B', new EnchantmentIngredient(Enchantments.BINDING_CURSE, 1))
-						.define('L', Items.ECHO_SHARD)
-						.save(pvd, getID(LCEnchantments.SOUL_BOUND.get()));
-
 				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.DAMPENED.get(), 1)::unlockedBy, LCMats.SCULKIUM.getNugget())
 						.pattern("LAL").pattern("ABA").pattern("LAL")
 						.define('A', LCMats.SCULKIUM.getNugget())

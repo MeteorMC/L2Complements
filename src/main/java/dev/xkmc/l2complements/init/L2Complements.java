@@ -4,7 +4,6 @@ import com.stal111.forbidden_arcanus.ForbiddenArcanus;
 import com.stal111.forbidden_arcanus.core.registry.FARegistries;
 import com.tterrag.registrate.providers.ProviderType;
 import dev.xkmc.l2complements.compat.forbidden.FaARecipe;
-import dev.xkmc.l2complements.content.enchantment.special.SoulBoundPlayerData;
 import dev.xkmc.l2complements.events.L2ComplementsClick;
 import dev.xkmc.l2complements.events.MaterialDamageListener;
 import dev.xkmc.l2complements.init.data.*;
@@ -66,7 +65,6 @@ public class L2Complements {
 		LCEntities.register();
 		LCRecipes.register();
 		LCConfig.init();
-		SoulBoundPlayerData.register();
 		new L2ComplementsClick(new ResourceLocation(MODID, "main"));
 		AttackEventHandler.register(5000, new MaterialDamageListener());
 		REGISTRATE.addDataGenerator(ProviderType.LANG, LangData::addTranslations);

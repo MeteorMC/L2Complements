@@ -48,15 +48,10 @@ public class LCItems {
 
 	public static final RegistryEntry<CreativeModeTab> TAB_ITEM;
 	public static final RegistryEntry<CreativeModeTab> TAB_ENCHMIN;
-	public static final RegistryEntry<CreativeModeTab> TAB_ENCHMAX;
 
 	static {
 		TAB_ENCHMIN = REGISTRATE.buildL2CreativeTab("enchantments_low", "L2 Enchantments - Craftable", b -> b
 				.icon(Items.BOOK::getDefaultInstance));
-
-		TAB_ENCHMAX = REGISTRATE.buildL2CreativeTab("enchantments_max", "L2 Enchantments - Lv Max", b -> b
-				.icon(() -> EnchantedBookItem.createForEnchantment(
-						new EnchantmentInstance(LCEnchantments.SOUL_BOUND.get(), 1))));
 
 		TAB_ITEM = REGISTRATE.buildL2CreativeTab("l2complements", "L2Complements Items", b -> b
 				.icon(LCItems.RESONANT_FEATHER::asStack));

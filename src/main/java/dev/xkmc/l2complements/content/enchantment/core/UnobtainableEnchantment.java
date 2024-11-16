@@ -31,13 +31,6 @@ public class UnobtainableEnchantment extends Enchantment implements CraftableEnc
 					.forEach((e) -> e.getCraftableLevels().forEach(i -> m.accept(makeBook(e, i),
 							CreativeModeTab.TabVisibility.PARENT_TAB_ONLY)));
 		});
-
-		reg.modifyCreativeModeTab(LCItems.TAB_ENCHMAX.getKey(), m -> {
-			Set<EnchantmentCategory> set = Set.of(cats);
-			getSorted().stream()
-					.filter(e -> e.allowedInCreativeTab(Items.ENCHANTED_BOOK, set))
-					.forEach((e) -> m.accept(makeBook(e, e.getMaxLevel()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY));
-		});
 	}
 
 	private static List<UnobtainableEnchantment> getSorted() {

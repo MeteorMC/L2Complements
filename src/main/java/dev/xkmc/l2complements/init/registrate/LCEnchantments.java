@@ -14,7 +14,6 @@ import dev.xkmc.l2complements.content.enchantment.digging.*;
 import dev.xkmc.l2complements.content.enchantment.special.LegendaryEnchantment;
 import dev.xkmc.l2complements.content.enchantment.special.LifeMendingEnchantment;
 import dev.xkmc.l2complements.content.enchantment.special.LifeSyncEnchantment;
-import dev.xkmc.l2complements.content.enchantment.special.SoulBindingEnchantment;
 import dev.xkmc.l2complements.content.enchantment.weapon.*;
 import dev.xkmc.l2library.base.L2Registrate;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -43,7 +42,6 @@ public class LCEnchantments {
 	public static final RegistryEntry<LegendaryEnchantment> ETERNAL;
 	public static final RegistryEntry<LegendaryEnchantment> HARDENED;
 	public static final RegistryEntry<WindSweepEnchantment> WIND_SWEEP;
-	public static final RegistryEntry<SoulBindingEnchantment> SOUL_BOUND;
 	public static final RegistryEntry<IceBladeEnchantment> ICE_BLADE;
 	public static final RegistryEntry<SoulFlameBladeEnchantment> FLAME_BLADE;
 	public static final RegistryEntry<CurseBladeEnchantment> CURSE_BLADE;
@@ -112,10 +110,6 @@ public class LCEnchantments {
 			DAMPENED = reg("dampened", EnchantmentCategory.WEARABLE, SingleLevelEnchantment::new,
 					"When wearing 4 pieces of armors with dampened effect, cancel all vibrations emitted by wearer.")
 					.addArmorSlots().rarity(Enchantment.Rarity.VERY_RARE).register();
-
-			SOUL_BOUND = reg("soul_bound", ALL, SoulBindingEnchantment::new,
-					"Remain in inventory after death.")
-					.addSlots(EquipmentSlot.values()).rarity(Enchantment.Rarity.VERY_RARE).defaultLang().register();
 
 			ETERNAL = reg("eternal", EnchantmentCategory.BREAKABLE, LegendaryEnchantment::new,
 					"Item will ignore all durability damage.")
